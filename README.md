@@ -1,6 +1,6 @@
 # Project name: 
 
-Project 2.0
+Web Dev Social
 
 # Description
 
