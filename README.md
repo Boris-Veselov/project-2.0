@@ -4,7 +4,14 @@ Web Dev Social
 
 # Description
 
-A full-stack application that works with real-world data to solve a real-world challenge
+A social network platform that helps prospective wed development bootcamp participants to connect with current and past bootcamp survivors,
+where they can get advice, feedback, create personal connections, and where boot camp graduates can help others who once were in their position.
+
+# User story
+
+As a prospective development bootcamp participant,
+I would like to connect with current and past bootcamp survivors,
+So that I can get advice, feedback, create personal connections, and eventually help others who once were in my position.
 
 # Languages and technologies used
 

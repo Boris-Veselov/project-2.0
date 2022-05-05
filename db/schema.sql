@@ -1,0 +1,4 @@
+DROP DATABASE IF EXISTS wds_db;
+
+CREATE DATABASE wds_db;
+
