@@ -24,7 +24,7 @@ router.get('/:id', (req, res) => {
     })
         .then(dbUserData => {
           if (!dbUserData) {
-            res.status(404).json({ message: 'No user found with this id' });
+            res.status(404).json({ message: 'No user with this id in our database' });
             return;
           }
           res.json(dbUserData);
@@ -33,6 +33,32 @@ router.get('/:id', (req, res) => {
           console.log(err);
           res.status(500).json(err);
         });
+});
+
+// login functions
+router.post('/login', (req, res) => {
+    // expects {email: '', password: ''}
+    User.findOne({
+        where: {
+            email: req.body.email
+        }
+    }).then(dbUserData => {
+        if (!dbUserData) {
+            res.status(400).json({ message: 'No user with this email in our database!' });
+            return;
+    }
+
+    // res.json({ user: dbUserData });
+
+    // Verify user
+    const validPassword = dbUserData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+        res.status(400).json({ message: 'Wrong password!' });
+        return;
+    }
+    res.json({ user: dbUserData, message: 'You are logged in!' });
+    });  
 });
 
 // POST /api/users
@@ -61,7 +87,7 @@ router.put('/:id', (req, res) => {
     })
         .then(dbUserData => {
             if (!dbUserData[0]) {
-                res.status(404).json({ message: 'No user found with this id' });
+                res.status(404).json({ message: 'No user with this id in our database' });
                 return;
             }
             res.json(dbUserData);
@@ -81,7 +107,7 @@ router.delete('/:id', (req, res) => {
     })
         .then(dbUserData => {
             if (!dbUserData) {
-                res.status(404).json({ message: 'No user found with this id' });
+                res.status(404).json({ message: 'No user with this id in our database' });
                 return;
             }
             res.json(dbUserData);
