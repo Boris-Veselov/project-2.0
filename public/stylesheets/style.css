@@ -30,6 +30,18 @@
     color: #1d1db8;
   }
   
+  #logo {
+      height: 55px;
+      width: 80px;
+      margin-right: 10px;
+  }
+  
+  .card {
+      color: #1d1db8;
+  }
+  
+  
+  
   .button {
     background-color: #b9e141;
     border-radius: 5px;
@@ -132,6 +144,38 @@
   
   /*Posts*/
   
-  /*Resources*/
+  .comment {
+      font-size: 14px;
+      color: #1d1db8;
+  }
+  
+  #com-button {
+      margin: 0px;
+  }
+  
+  .com-form {
+      border-top: 1px solid #1d1db8;
+  }
 
-  /*BONUS PAGE*/
+    /*BONUS PAGE*/
+  
+  /* Media Queries */
+  
+  @media (max-width: 768px) {
+      #head {
+          margin: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content:center;
+          align-items: center;
+        }
+  
+        #head h1 {
+          font-size: 35px;
+        }
+        
+        .topic h3 {
+          font-size: 50px;
+          padding-bottom: 40px;
+        }
+  } 
