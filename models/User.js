@@ -71,7 +71,7 @@ User.init(
             }
         );
 
-        User.sync({ alter: true });
-console.log("==> The table for the User model was just (re)created!");
+//         User.sync({ alter: true });
+// console.log("==> The table for the User model was just created!");
 
 module.exports = User;
