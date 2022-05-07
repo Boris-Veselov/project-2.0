@@ -12,4 +12,12 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
+router.get("/allposts", (req, res) => {
+  res.render("allposts");
+});
+
+router.get("/resources", (req, res) => {
+  res.render("resources");
+});
+
 module.exports = router;
