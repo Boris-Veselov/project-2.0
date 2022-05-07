@@ -4,7 +4,7 @@ Web Dev Social
 
 # Description
 
-A social network platform that helps prospective wed development bootcamp participants to connect with current and past bootcamp survivors,
+A social networking platform that helps prospective wed development bootcamp participants to connect with current and past bootcamp survivors,
 where they can get advice, feedback, create personal connections, and where boot camp graduates can help others who once were in their position.
 
 # User story
