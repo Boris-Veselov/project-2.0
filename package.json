@@ -24,7 +24,8 @@
     "express": "^4.18.1",
     "express-handlebars": "^6.0.5",
     "mysql2": "^2.3.3",
-    "require": "^2.4.20",
+    "require": "^0.4.4",
+    "seeds": "^2.3.1",
     "sequelize": "^6.19.0"
   }
 }
