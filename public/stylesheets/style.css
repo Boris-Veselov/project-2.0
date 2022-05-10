@@ -17,7 +17,7 @@
   }
   
   a:hover {
-    color: grey;
+    color: #444444;
   }
   
   ul li {
@@ -29,48 +29,76 @@
     font-weight: bold;
     color: black;
   }
+
+  img:hover {
+      opacity: 90%;
+  }
+
   
   #logo {
-      height: 55px;
-      width: 80px;
-      margin-right: 10px;
+      height: 45px;
+      width: 70px;
   }
   
   .card {
       color: black;
+      opacity: 95%;
+      border-radius: 5px;
   }
-  
-  
-  
-  .button {
+  .card:hover {
+    color: black;
+    opacity: 100%;
+}
+
+.button {
     background-color: #b9e141;
     border-radius: 5px;
     margin-top: 20px;
     margin-bottom: 5px;
-  }
+}
   
   .button:hover {
     background-color: #69e141;
-  }
+}
+  
   
   /*Header*/
-  #head {
-    margin: 5px;
+  .head {
+    padding: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
   
-  #head a {
+  .head a {
     font-weight: bold;
     padding: 10px;
     font-size: larger;
   }
   
-  #head h1 {
+  .head h1 {
     font-size: 43px;
   }
+
+  #crtbtn {
+    background-color: white;
+    color: #000; 
+    color: rgba(0, 0, 0, 0.5);
+    margin-top:0px;
+    border-radius: 50px;
+    opacity: 100%;
+    padding:13px;
+    mix-blend-mode: screen;
+}
+  
+#crtbtn:hover {
+    background-color: white;
+    color: #000; 
+    color: rgba(0, 0, 0, 0.5);
+    opacity: 90%;
+    mix-blend-mode: screen;
+}
   
   /*Nav*/
   
@@ -78,7 +106,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0%;
+    transition-property: opacity;
+    transition-duration: 3s;
     /* font-size: medium; */
+  }
+
+  #nav:hover {
+      opacity: 100%;
   }
   
   /*Main*/
@@ -97,9 +132,11 @@
     margin-top: 50px;
     margin-bottom: 30px;
   }
-  
-  .card {
-    border-radius: 5px;
+
+  .create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .contact {
@@ -131,14 +168,27 @@
     display: flex;
     justify-content: flex-end;
     margin: 5px;
-    border-top: 3px solid black;
   }
+
+  /*Granim*/
+  #Granim {
+    position:fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
   /*Login/Signup*/
   
   .radio {
       font-size: 15px;
       font-weight:normal;
     }
+
+input,
+textarea {
+    opacity: 80%;
+}
   
   /*Cat-a-log*/
   
@@ -162,20 +212,28 @@
   /* Media Queries */
   
   @media (max-width: 768px) {
-      #head {
-          margin: 20px;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content:center;
-          align-items: center;
-        }
-  
-        #head h1 {
-          font-size: 35px;
-        }
-        
-        .topic h3 {
-          font-size: 50px;
-          padding-bottom: 40px;
-        }
-  } 
+.head {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.head h1 {
+    font-size: 35px;
+}
+
+#nav {
+    opacity: 100%;
+}
+
+
+.topic h3 {
+    padding-bottom: 40px;
+}
+
+h3 {
+    font-size: 50px;
+}
+} 
