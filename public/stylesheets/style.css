@@ -185,6 +185,18 @@
       font-weight:normal;
     }
 
+    #submitbtn {
+        background-color: white;
+        color: #000; 
+        color: rgba(0, 0, 0, 0.5);
+        margin-top:0px;
+        border-radius: 50px;
+        opacity: 100%;
+        padding:13px;
+        mix-blend-mode: screen;
+        font-weight: bold;
+    }
+
 input,
 textarea {
     opacity: 80%;
