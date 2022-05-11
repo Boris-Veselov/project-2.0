@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-  res.render('home');
+  res.send('home');
 });
 
 // const exphbs = require('express-handlebars');
