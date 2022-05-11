@@ -76,6 +76,12 @@
     padding: 10px;
     font-size: larger;
   }
+
+  #logout {
+    font-weight: bold;
+    padding: 10px;
+    font-size: larger;
+  }
   
   .head h1 {
     font-size: 43px;
