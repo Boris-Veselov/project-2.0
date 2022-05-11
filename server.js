@@ -1,5 +1,5 @@
 const express = require('express');
-// const sequelize = require('./config/connection');
+const sequelize = require('./config/connection');
 const path = require('path');
 
 const app = express();
@@ -26,6 +26,6 @@ app.use(require('./controllers/'));
 
 
 // sync sequelize models to the database, then turn on the server
-// sequelize.sync({ force: false }).then(() => {
+ sequelize.sync().then(() => {
   app.listen(PORT, () => console.log('Now listening'));
-// });
+});
