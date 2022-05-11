@@ -30,6 +30,8 @@ https://boris-veselov.github.io/project-2.0/
 
 # Screenshot
 
+![Web Dev Social Preview](/public/assets/images/preview.png)
+
 # Contribution
 
 Made by Griffin Martin, Madison Milner, Michael Phan, Oscar Hernandez & Boris Veselov

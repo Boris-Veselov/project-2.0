@@ -10,21 +10,27 @@
       href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
       crossorigin="anonymous"
     />
-    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <header>
-      <div id="head">
-        <h1><a href="/"><img src="/assets/images/cat-on-log.jpg" alt="Cat on a Log" id="logo">web-dev social</a></h1>
+        <!--gradient background-->
+        <canvas id="Granim"></canvas>
+      <div class="head">
+        <h1><a href="/" >
+        <img src="/assets/images/cat-on-log.png" alt="Cat on a Log" id="logo">
+        web-dev social</a></h1>
         <div>
-          <a href="/">login</a>
-          <a href="/">sign up</a>
+          <a href="/login">login</a>
+          <a href="/signup">sign up</a>
+          <a href="/create_a_post" class="button large" id="crtbtn">create a post</a>
         </div>
       </div>
     </header>
 
     <main>
+        <!--import body from other handlebars files-->
         {{{body}}}
     </main>
     <footer>
@@ -32,5 +38,8 @@
         <h5>© 2022 web-dev social</h5>
       </div>
     </footer>
+    <!--import js & cdn for gradient/granim feature-->
+    <script src="https://cdn.tutorialjinni.com/granim/2.0.0/granim.js"></script>
+    <script src="/javascript/main.js"></script>
   </body>
 </html>
