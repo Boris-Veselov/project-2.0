@@ -5,7 +5,7 @@ require('dotenv').config();
 
 // create connection to our db
 // process.env.JAWSDB_URL? new Sequelize(process.env.JAWSDB_URL)
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PW, 
+let sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PW, 
     {
       host: process.env.DB_HOST,
       dialect: 'mysql',
