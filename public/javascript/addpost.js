@@ -1,25 +1,24 @@
 async function addPost(event) {
     event.preventDefault();
 
-    const title = document.querySelector('input[name="post-title"]').value;
-    const post_content = document.querySelector('textarea[name="post-content"]').value;
+    const title = document.querySelector('#postTitle').value.trim();
+    const post_content = document.querySelector('textarea[name="comment-body"]').value.trim();
 
-    const response = await fetch(`/api/posts`, {
+    const response = await fetch('/api/posts', {
         method: 'POST',
         body: JSON.stringify({
             title,
             post_content
         }),
-        headers: {
-            'Content-Type': 'application/json'
-        }
+        headers: { 'Content-Type': 'application/json' }
     });
 
     if (response.ok) {
-        document.location.replace('');
+        console.log('WOO! Your post has been added!');
+        document.location.reload();
     } else {
         alert(response.statusText);
     }
 }
 
-document.querySelector('.new-post-form').addEventListener('submit', addPost);
+document.querySelector('#postSubmit').addEventListener('submit', addPost);
