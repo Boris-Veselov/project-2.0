@@ -86,7 +86,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.put('/:id', auth, (req, res) => {
+router.put('/:id', (req, res) => {
     Post.update(
         {
             title: req.body.title,

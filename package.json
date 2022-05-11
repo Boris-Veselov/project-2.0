@@ -24,6 +24,7 @@
     "express": "^4.18.1",
     "express-handlebars": "^6.0.5",
     "granim": "^2.0.0",
+    "mysql": "github:mysqljs/mysql",
     "mysql2": "^2.3.3",
     "require": "^0.4.4",
     "seeds": "^2.3.1",
