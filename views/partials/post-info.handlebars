@@ -1,12 +1,11 @@
-<div>
-<div class="grid-container">
-   <div class="card cell small-10 large-7 align-spaced">
+{{#each post}}
+<div class="card cell small-10 large-7 align-spaced">
         <h4 class="card-divider align-center">
-        <a href="/singlepost/{{post.id}}">{{post.title}}</a>
+        <a href="{{post_url}}">{{title}}</a>
         </h4>
         <div class="card-section text-center">
         <p>
-            {{post.post_content}}
+            {{post_content}}
         </p>
         <div class="grid-container">
             <div class="grid-x grid-padding-x">
@@ -17,5 +16,4 @@
         </div>
         </div>
 </div>
-</div>
-</div>
+{{/each}}
