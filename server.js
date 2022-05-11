@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3001;
 
 const router = require('express').Router();
 
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
   res.send('home');
 });
 
@@ -27,5 +27,5 @@ router.get('/', (req, res) => {
 
 // sync sequelize models to the database, then turn on the server
 // sequelize.sync({ force: false }).then(() => {
-  app.listen(process.env.PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Now listening'));
 // });
