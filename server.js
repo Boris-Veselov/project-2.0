@@ -5,6 +5,12 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const router = require('express').Router();
+
+router.get('/', (req, res) => {
+  res.render('home');
+});
+
 // const exphbs = require('express-handlebars');
 // const hbs = exphbs.create({});
 
