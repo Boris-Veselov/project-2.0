@@ -1,28 +1,24 @@
 <div class="header">
     <h2>create a post</h2>
 </div>
-<form>
-    <input type="radio" id="SHARE YOUR STORY" name="topic" value="share your story">
-    <label for="SHARE YOUR STORY">share your story</label><br>
-    <input type="radio" id="EXPECTATIONS VS REALITY" name="topic" value="expectations vs reality">
-    <label for="EXPECTATIONS VS REALITY">expectations vs reality</label><br>
+<form action="/api/comment">
+    <input type="radio" id="SHARE_YOUR_STORY" name="topic" value="share your story">
+    <label for="SHARE_YOUR_STORY">share your story</label><br>
+    <input type="radio" id="EXPECTATIONS_VS_REALITY" name="topic" value="expectations vs reality">
+    <label for="EXPECTATIONS_VS_REALITY">expectations vs reality</label><br>
     <input type="radio" id="ESSENTIALS" name="topic" value="essentials">
     <label for="ESSENTIALS">essentials</label><br>
-    <input type="radio" id="SURVIVAL SKILLS" name="topic" value="survival skills">
-    <label for="SURVIVAL SKILLS">survival skills</label><br>
-</form>
-<form>
+    <input type="radio" id="SURVIVAL_SKILLS" name="topic" value="survival skills">
+    <label for="SURVIVAL_SKILLS">survival skills</label><br>
     <div class="grid-container">
         <div class="grid-x grid padding-x">
             <div class="medium-8 large-6 cell">
                 <label for="title" class="middle">name your post</label>
-                <input type="text" id="user" placeholder="name your post">
+                <input type="text" id="post_name" placeholder="name your post" name="post_name">
             </div>
         </div>
     </div>
-</form>
-<form action="/Applications/">
     <label for="body">post:</label>
-    <textarea id="postBox" cols="50" rows="10" type="text" id="body" name="body" placeholder="post"></textarea><br><br>
+    <textarea id="postBox" cols="50" rows="10" type="text" id="post_body" name="post_body" placeholder="post"></textarea><br><br>
     <input type="submit" value="submit">
 </form>
