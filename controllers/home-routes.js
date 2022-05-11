@@ -1,6 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
+  console.log(req.session);
   res.render('home');
 });
 
@@ -12,7 +13,12 @@ router.get('/cat-a-log', (req, res) => {
   res.render('cat-a-log');
 });
 router.get("/login", (req, res) => {
-  res.render("login");
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  
+  res.render('login');
 });
 
 router.get("/signup", (req, res) => {
