@@ -209,7 +209,29 @@ textarea {
 }
   
   /*Cat-a-log*/
+
+  #cat-a-log-names {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   
+  .cat-a-log-name {
+    width: 33%;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  #cat-a-log-title {
+    text-align: center;
+  }
+
   /*Posts*/
   
   .comment {
@@ -224,6 +246,35 @@ textarea {
   .com-form {
       border-top: 1px solid black;
   }
+
+  #create-post-form {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #create-post-title {
+    text-align: center;
+  }
+
+  #create-post-submit {
+    background-color: white;
+    color: #000; 
+    color: rgba(0, 0, 0, 0.5);
+    margin-top:0px;
+    border-radius: 50px;
+    opacity: 100%;
+    padding:13px;
+    mix-blend-mode: screen;
+}
+  
+#create-post-submit:hover {
+    background-color: white;
+    color: #000; 
+    color: rgba(0, 0, 0, 0.5);
+    opacity: 90%;
+    mix-blend-mode: screen;
+}
 
     /*BONUS PAGE*/
   
