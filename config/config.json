@@ -8,8 +8,8 @@
     },
     "test": {
       "username": "root",
-      "password": "root",
-      "database": "appTracker",
+      "password": "",
+      "database": "wds_db",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
