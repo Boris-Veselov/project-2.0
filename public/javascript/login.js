@@ -16,6 +16,7 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
+        alert("you're now trapped forever");
         document.location.replace('/');
       } else {
         alert(response.statusText);

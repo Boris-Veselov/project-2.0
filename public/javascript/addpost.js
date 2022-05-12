@@ -16,6 +16,7 @@ async function addPost(event) {
     });
 
     if (response.ok) {
+        alert("it worked! told you so!")
         document.location.replace('/allposts');
     } else {
         alert(response.statusText);
