@@ -1,7 +1,7 @@
 <div class="header" id="create-post-title">
     <h2>create a post</h2>
 </div>
-<form action="/api/comment" id="create-post-form">
+<form action="/api/comment" id="new-post-form">
     <input type="radio" id="SHARE_YOUR_STORY" name="topic" value="share your story">
     <label for="SHARE_YOUR_STORY">share your story</label><br>
     <input type="radio" id="EXPECTATIONS_VS_REALITY" name="topic" value="expectations vs reality">
@@ -14,11 +14,13 @@
         <div class="grid-x grid padding-x">
             <div class="medium-8 large-6 cell">
                 <label for="title" class="middle">name your post</label>
-                <input type="text" id="post_name" placeholder="name your post" name="post_name">
+                <input type="text" id="post_name" placeholder="name your post" name="post-title">
             </div>
         </div>
     </div>
     <label for="body">post:</label>
-    <textarea id="postBox" cols="50" rows="10" type="text" id="post_body" name="post_body" placeholder="post"></textarea><br><br>
+    <textarea id="postBox" cols="50" rows="10" type="text" id="post_body" name="post-content" placeholder="post"></textarea><br><br>
     <input type="submit" value="submit" id="create-post-submit">
 </form>
+
+<script src="/javascript/addpost.js"></script>

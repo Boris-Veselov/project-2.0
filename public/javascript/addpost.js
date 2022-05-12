@@ -16,10 +16,10 @@ async function addPost(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/allposts');
     } else {
         alert(response.statusText);
     }
 }
 
-document.querySelector('.new-post-form').addEventListener('submit', addPost);
+document.querySelector('#new-post-form').addEventListener('submit', addPost);
