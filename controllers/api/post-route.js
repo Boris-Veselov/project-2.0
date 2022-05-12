@@ -8,7 +8,7 @@ router.post('/', (req, res)=> {
         Post.create({
             title: req.body.title,
             post_content: req.body.post_content,
-            user_id: req.session.user_id
+            user_id: req.body.user_id
         })
         
         .then(dbPostData => res.json(dbPostData))
@@ -26,13 +26,14 @@ router.get('/', (req, res) => {
             'id',
             'post_content',
             'title',
-            'created_at'
+            'createdAt',
+            'user_id'
         ],
-        order: [['created_at', 'DESC']],
+        // order: [['created_at', 'DESC']],
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment-entry', 'post_id', 'user_id', 'created_at'],
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes:['username']
@@ -40,7 +41,7 @@ router.get('/', (req, res) => {
             },
             {
                 model: User,
-                attributes: ['username']
+                attributes: ['username', 'id']
             }
         ]
     })
