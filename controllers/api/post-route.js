@@ -3,12 +3,12 @@ const {Post, User, Comment} = require ('../../models');
 const sequelize = require('../../config/connection');
 const auth = require('../../utils/auth')
 
-router.post('/', (req, res)=> {
+router.post('/', auth, (req, res)=> {
     if (req.session) {
         Post.create({
             title: req.body.title,
             post_content: req.body.post_content,
-            user_id: req.body.user_id
+            user_id: req.session.user_id
         })
         
         .then(dbPostData => res.json(dbPostData))
@@ -27,7 +27,6 @@ router.get('/', (req, res) => {
             'post_content',
             'title',
             'createdAt',
-            'user_id'
         ],
         // order: [['created_at', 'DESC']],
         include: [
