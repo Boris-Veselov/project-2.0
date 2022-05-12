@@ -1,0 +1,23 @@
+{
+    "development": {
+      "username": "root",
+      "password": "Silver*sky2319",
+      "database": "wds_db",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "root",
+      "password": "Silver*sky2319",
+      "database": "wds_db",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "xkmrvkivjf1karuq",
+      "password": "nx5z9q20oqdcettd",
+      "database": "mv7pazq0qdoodnm0",
+      "host": "lyn7gfxo996yjjco.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+      "dialect": "mysql"
+    }
+  }

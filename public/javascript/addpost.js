@@ -14,11 +14,19 @@ async function addPost(event) {
     });
 
     if (response.ok) {
+<<<<<<< Updated upstream
         alert('WOO! Your post has been added!');
         document.location.replace('/dashboard');
+=======
+        document.location.replace('/create_a_post');
+>>>>>>> Stashed changes
     } else {
         alert(response.statusText);
     }
 }
 
+<<<<<<< Updated upstream
 document.querySelector('#postBtn').addEventListener('click', addPost);
+=======
+document.querySelector('#create-post-form').addEventListener('submit', addPost);
+>>>>>>> Stashed changes

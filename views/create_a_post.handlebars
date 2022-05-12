@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <div class="container text-light">
     <section class="newPost">
         <h2>Create New Post</h2>
@@ -30,6 +31,38 @@
     <h2>Your Posts</h2>
     <ul class="yourPosts text-light">
         {{#each post as |post|}}
+=======
+<div class="header" id="create-post-title">
+    <h2>create a post</h2>
+</div>
+<form id="create-post-form">
+    <input type="radio" id="SHARE_YOUR_STORY" name="topic" value="share your story">
+    <label for="SHARE_YOUR_STORY">share your story</label><br>
+    <input type="radio" id="EXPECTATIONS_VS_REALITY" name="topic" value="expectations vs reality">
+    <label for="EXPECTATIONS_VS_REALITY">expectations vs reality</label><br>
+    <input type="radio" id="ESSENTIALS" name="topic" value="essentials">
+    <label for="ESSENTIALS">essentials</label><br>
+    <input type="radio" id="SURVIVAL_SKILLS" name="topic" value="survival skills">
+    <label for="SURVIVAL_SKILLS">survival skills</label><br>
+    <div class="grid-container">
+        <div class="grid-x grid padding-x">
+            <div class="medium-8 large-6 cell">
+                <label for="title" class="middle">name your post</label>
+                <input type="text" id="post_name" placeholder="name your post" name="post-title">
+            </div>
+        </div>
+    </div>
+    <label for="body">post:</label>
+    <textarea id="postBox" cols="50" rows="10" type="text" id="post_body" name="post-content" placeholder="post"></textarea><br><br>
+    <input type="submit" value="submit" id="create-post-submit">
+</form>
+
+    {{#if posts.length}}
+
+    <h2>Your Posts</h2>
+    <ul class="yourPosts text-light">
+        {{#each posts as |post|}}
+>>>>>>> Stashed changes
         <li class="post-li bg-dark postWithEdit">
             
             <div class="row editRow">
@@ -42,5 +75,8 @@
 
     {{/if}}
 </div>
+<<<<<<< Updated upstream
 
 <script src="/javascript/addpost.js"></script>
+=======
+>>>>>>> Stashed changes
