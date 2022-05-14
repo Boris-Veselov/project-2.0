@@ -42,7 +42,7 @@ router.get("/allposts", (req, res) => {
   })
     .then((dbPostData) => {
       const posts = dbPostData.map((post) => post.get({ plain: true }));
-      // console.log(dbPostData[0]);
+      console.log(dbPostData[0]);
       res.render("allposts", {
         posts,
         loggedIn: req.session.loggedIn,
