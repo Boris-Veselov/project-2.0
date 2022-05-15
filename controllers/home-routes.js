@@ -1,19 +1,28 @@
 const router = require('express').Router();
 const { Post, User } = require("../models");
 
+//Render home page
 router.get('/', (req, res) => {
-  res.render('home'), {
-  loggedIn: req.session.loggedIn
-  }
+  res.render("home", {
+    loggedIn: req.session.loggedIn,
+  });
 });
 
+//Render create a post page
 router.get('/create_a_post', (req, res) => {
-  res.render('create_a_post');
+  res.render("create_a_post", {
+    loggedIn: req.session.loggedIn,
+  });
 });
 
+//Render cat-a-log page
 router.get('/cat-a-log', (req, res) => {
-  res.render('cat-a-log');
+  res.render("cat-a-log", {
+    loggedIn: req.session.loggedIn,
+  });
 });
+
+//Render login page if user is not logged in
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -23,10 +32,17 @@ router.get("/login", (req, res) => {
   res.render('login');
 });
 
+//Render signup page
 router.get("/signup", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
   res.render("signup");
 });
 
+//Render allposts page
 router.get("/allposts", (req, res) => {
   Post.findAll({
     attributes: [
@@ -55,29 +71,30 @@ router.get("/allposts", (req, res) => {
     });
 });
 
-router.get('/singlepost', (req, res) => {
+//Render singlepost page for specific post clicked on
+router.get('/singlepost/:id', (req, res) => {
   Post.findOne({
     where: {
       id: req.params.id
     },
     attributes: [
       'id',
-      'post_content',
       'title',
+      'post_content'
     ],
-    include: [
-      {
-        model: User,
-        attributes: ['username']
-      }
-    ]
+    include: {
+      model: User,
+      attributes: ['username']
+    }
   })
   .then(dbSPostData => {
-    if (!dbSPostData) {
-      res.status(404).json({ message: 'No post found with this id' });
+    if(!dbSPostData) {
+      res.status(404).json({message: "Sorry, this post doesn't exist!"});
       return;
     }
 
+    console.log(dbSPostData);
+    const singlepost = dbSPostData.get({ plain: true });
     res.render('singlepost', {
       singlepost,
       loggedIn: req.session.loggedIn
@@ -87,11 +104,13 @@ router.get('/singlepost', (req, res) => {
     console.log(err);
     res.status(500).json(err);
   });
-
 });
 
+//Render resources page
 router.get("/resources", (req, res) => {
-  res.render("resources");
+    res.render("resources", {
+      loggedIn: req.session.loggedIn,
+    });
 });
 
 module.exports = router;

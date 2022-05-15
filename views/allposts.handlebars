@@ -3,7 +3,7 @@
     {{#each posts as |post|}}
    <div class="card cell small-10 large-7 align-spaced">
         <h4 class="card-divider align-center">
-        <a href="/singlepost">{{post.title}}</a>
+        <a href="/singlepost/{{post.id}}">{{post.title}}</a>
         </h4>
         <div class="card-section text-center">
         <p>
@@ -12,7 +12,7 @@
         <div class="grid-container">
             <div class="grid-x grid-padding-x">
             <div class=" cell">
-                <h5><a href="/singlepost" class="button">view comments</a></h5>
+                <h5><a href="/singlepost/{{post.id}}" class="button">view comments</a></h5>
             </div>
             </div>
         </div>

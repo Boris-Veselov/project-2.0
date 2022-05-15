@@ -3,14 +3,14 @@
     <div class="grid-x align-center grid-margin-x">
     <div class="card cell small-10 large-10 align-spaced">
         <h4 class="card-divider">
-        <a href=""> {{ post.title }}</a>
+        <a href=""> {{ singlepost.title }}</a>
         </h4>
         <div class="card-section">
         <p>
-            {{ post.post_content }}
+            {{ singlepost.post_content }}
         </p>
         <p>
-            - {{ post.username }}
+            - {{ singlepost.user.username }}
         </p>
         <div class="comment">
             <div>
