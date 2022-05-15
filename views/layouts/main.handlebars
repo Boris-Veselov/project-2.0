@@ -22,10 +22,14 @@
         <img src="/assets/images/cat-on-log.png" alt="Cat on a Log" id="logo">
         web-dev social</a></h1>
         <div>
-          <a href="/login">login</a>
-          <a href="/signup">sign up</a>
-          <button id="logout">logout</button>
-          <a href="/create_a_post" class="button large" id="crtbtn">create a post</a>
+          <!--if helper only allows users to see logout button and create post button if they're logged in-->
+          {{#if loggedIn}}
+            <button id="logout">logout</button>
+            <a href="/create_a_post" class="button large" id="crtbtn">create a post</a>
+          {{else}}
+           <a href="/login">login</a>
+            <a href="/signup">sign up</a>
+          {{/if}}
 
         </div>
       </div>
@@ -43,8 +47,10 @@
     <!--import js & cdn for gradient/granim feature-->
     <script src="https://cdn.tutorialjinni.com/granim/2.0.0/granim.js"></script>
     <script src="/javascript/main.js"></script>
-
+    <!--only runs this file if user is logged in-->
+    {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
+    {{/if}}
 
   </body>
 </html>

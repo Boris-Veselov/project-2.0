@@ -56,7 +56,7 @@ router.post('/', (req, res) => {
 });
 
 // PUT /api/users/1
-2// expects {username: '', email: '', password: ''}
+// expects {username: '', email: '', password: ''}
 router.put('/:id', (req, res) => {
     User.update(req.body, {
         individualHooks: true,
