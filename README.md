@@ -26,7 +26,7 @@ So that I can get advice, feedback, create personal connections, and eventually 
 
 # Website
 
-https://boris-veselov.github.io/project-2.0/
+https://guarded-atoll-65920.herokuapp.com/
 
 # Screenshot
 
